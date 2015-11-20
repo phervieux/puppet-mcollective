@@ -5,7 +5,8 @@ class mcollective::server::service {
   }
 
   service { $mcollective::service_name:
-    ensure => 'running',
-    enable => true,
+    ensure    => 'running',
+    provider  => systemd,
+    enable    => true,
   }
 }
